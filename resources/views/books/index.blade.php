@@ -27,6 +27,7 @@
             <th>Judul</th>
             <th>Penulis</th>
             <th>Penerbit</th>
+            <th>Terdaftar</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($books as $key => $book)
@@ -36,6 +37,7 @@
             <td>{{ $book->title }}</td>
             <td>{{ $book->writer }}</td>
             <td>{{ $book->publisher }}</td>
+            <td>{{ $book->created_at }}</td>
             <td>
                 <form action="{{ route('books.destroy',$book->id) }}" method="POST">
    
