@@ -1,8 +1,7 @@
 <?php
 
-namespace {{ namespace }};
+namespace App\Http\Controllers;
 
-use {{ rootNamespace }}Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 
@@ -14,7 +13,7 @@ use Illuminate\Http\Request;
 //Ubah semua 'namamode' sesuai dengan nama model yang kalian gunakan pada controller ini (huruf kecil semua)
 //Sesuaikan validate rule sesuai kebutuhan
 
-class {{ class }} extends Controller
+class PenjualanController extends Controller
 {
     private $route = 'path_pertama.path_kedua.'; //misal di folder view/book/data jadi tulis aja book.data. kalau di folder view/book berarti tulis aja book.
 
