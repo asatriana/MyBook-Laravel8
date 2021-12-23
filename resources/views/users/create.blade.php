@@ -34,6 +34,14 @@
                     <label for="password">Password</label>                    
                     <input type="password" name="password" class="form-control" id="password" aria-describedby="password" >                
                 </div>
+                <div class="form-group">
+                    <label for="position-option">Posisi</label>
+                    <select class="form-control" id="position-option" name="position_id">
+                        @foreach ($positions as $position)
+                            <option value="{{ $position->id }}">{{ $position->position }}</option>
+                        @endforeach
+                    </select>
+                </div>
             <button type="submit" class="btn btn-primary">Submit</button>
             </form>
             </div>
