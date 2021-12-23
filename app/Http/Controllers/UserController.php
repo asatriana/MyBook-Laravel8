@@ -14,9 +14,10 @@ class UserController extends Controller
      */
     public function index()
     {
+        $title = "Header Component";
         //fungsi eloquent menampilkan data menggunakan pagination
         $users = User::latest()->paginate(5);
-        return view('users.index', compact('users'))
+        return view('users.index', compact('users','title'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
