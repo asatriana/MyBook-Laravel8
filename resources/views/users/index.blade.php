@@ -2,6 +2,7 @@
  
 @section('content')
     <div class="row">
+    <x-header type="success" title="{{$title}}"/>
         <div class="col-lg-12 margin-tb">
             <div class="pull-left mt-2">
                 <h2>Laravel 8 CRUD - Manajemen User</h2>
