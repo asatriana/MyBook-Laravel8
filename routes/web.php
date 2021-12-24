@@ -16,7 +16,8 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
     // return view('welcome');
 // });
-
+Route::get('books/export/', 'BooksController@export');
+Route::get('users/export/', 'UserController@export');
 Route::resource('books', 'BooksController');
 Route::resource('users', 'UserController');
 //Route::resource('search', 'UserController');
@@ -24,3 +25,4 @@ Route::resource('users', 'UserController');
 //1. Route::get('/search', [App\Http\Controllers\UserController::class, 'search'])->name('search');
 //2. Route::get('/search', '\App\Http\Controllers\UserController@search')->name('search');
 Route::get('/search', 'UserController@search')->name('search');
+

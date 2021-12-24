@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Exports\BooksExport;
+use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
 
 class BooksController extends Controller
@@ -104,5 +106,18 @@ class BooksController extends Controller
 
         return redirect()->route('books.index')
             ->with('success', 'Book deleted successfully'); //Redirect ke halaman books/index.blade.php dengan pesan success
+    }
+
+    public function export() 
+    {
+        //return Excel::download(new BooksExport, 'books.xlsx');
+
+        // $export = new BooksExport([
+            // [1, 2, 3],
+            // [4, 5, 6]
+        // ]);
+    
+        // return Excel::download($export, 'invoices.xlsx');
+        return (new BooksExport)->download('invoices.xlsx');
     }
 }

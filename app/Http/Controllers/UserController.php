@@ -4,9 +4,17 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Position;
 use Illuminate\Http\Request;
+use App\Exports\UsersExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class UserController extends Controller
 {
+
+    public function export() 
+    {
+        return Excel::download(new UsersExport, 'users.xlsx');
+    }
+    
     /**
      * Display a listing of the resource.
      *

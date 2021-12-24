@@ -8,6 +8,7 @@
             </div>
             <div class="text-right">
                 <a class="btn btn-success" href="{{ route('books.create') }}">Tambah Buku</a>
+                
             </div>
         </div>
     </div>
