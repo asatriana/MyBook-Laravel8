@@ -26,3 +26,5 @@ Route::resource('users', 'UserController');
 //2. Route::get('/search', '\App\Http\Controllers\UserController@search')->name('search');
 Route::get('/search', 'UserController@search')->name('search');
 
+Route::get('/pegawai', 'PegawaiController@index');
+Route::get('/pegawai/cetak_pdf', 'PegawaiController@cetak_pdf');
