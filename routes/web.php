@@ -28,3 +28,7 @@ Route::get('/search', 'UserController@search')->name('search');
 
 Route::get('/pegawai', 'PegawaiController@index');
 Route::get('/pegawai/cetak_pdf', 'PegawaiController@cetak_pdf');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
